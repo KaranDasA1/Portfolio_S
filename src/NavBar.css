@@ -1,0 +1,28 @@
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-item {
+    flex-direction: row;
+    margin: 0 15px;
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-item a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: width 0.3s; /* Added 's' to specify seconds */
+}
+
+.nav-item a:hover::after {
+    width: 100%;
+}
