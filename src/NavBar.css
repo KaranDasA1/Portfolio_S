@@ -1,17 +1,36 @@
 .navbar {
-    list-style: none;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #282c34;
+    width: 100%;
+    position: fixed; /* Make the navbar fixed to the top */
+    top: 0;
+    left: 0;
+    height: 60px; /* Adjust the height if needed */
+    z-index: 1000;
+}
+
+.nav-logo {
+    height: 40px;
+}
+
+.nav-items {
+    list-style: none;
+    display: flex;
+    margin: 0;
 }
 
 .nav-item {
-    flex-direction: row;
     margin: 0 15px;
 }
 
 .nav-item a {
     color: white;
     text-decoration: none;
+    position: relative;
+    font-size: 1.2em; /* Adjust the font size as needed */
 }
 
 .nav-item a::after {
@@ -20,9 +39,18 @@
     height: 2px;
     width: 0;
     background: white;
-    transition: width 0.3s; /* Added 's' to specify seconds */
+    transition: width 0.3s;
 }
 
 .nav-item a:hover::after {
     width: 100%;
+}
+
+/* New CSS to shift everything except nav-items to the left */
+.navbar .nav-logo {
+    margin-right: auto;
+}
+
+.navbar .nav-items {
+    margin-left: auto;
 }
